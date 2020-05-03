@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+        }
+
+        .box2 {
+            width: 500px;
+            height: 20px;
+            background-color: cornflowerblue;
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $('button').eq(0).click(function () {
+                $('.box1').animate({
+                    width: 500
+                }, 1000)
+                    .delay(1000) //设置延迟
+                    .animate({
+                        height: 500
+                    }, 1000)
+                    .animate({
+                        width: 100
+                    }, 1000)
+                    .animate({
+                        height: 100
+                    }, 1000)
+            })
+            $('button').eq(1).click(function () {
+                $('.box1').stop(true, true); //第一个参数为是否停止后续的，第二个参数为是否完成当前的
+            }) //完成当前的，停止后续的
+        })
+    </script>
+
+</head>
+
+<body>
+    <button>
+        开始动画
+    </button>
+    <button>
+        停止动画
+    </button>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>

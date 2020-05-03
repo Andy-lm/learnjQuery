@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ad {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+        .ad>span {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            /* background-color: blue; */
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $('span').click(function () {
+                $('.ad').remove();
+            })
+            $('.ad').stop().slideDown(1000).fadeOut(1000).fadeIn(1000); //使用动画序列结构更清楚
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class="ad">
+        <img src="./images/ad-pic.png" alt="">
+        <span></span>
+    </div>
+</body>
+
+</html>

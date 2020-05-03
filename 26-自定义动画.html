@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: chartreuse;
+        }
+
+        .box2 {
+            background-color: coral;
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $('button').eq(0).click(function () { //操作属性
+                $('.box1').animate({
+                    marginLeft: 800,
+                }, 4000) //其速度为缓动型
+                $('.box2').animate({
+                    marginLeft: 800,
+                }, 4000, 'linear') //其速度为线性
+            })
+            $('button').eq(1).click(function () { //累加属性
+                $('.box1').animate({
+                    width: '+=100',
+                }, 4000)
+                $('.box2').animate({
+                    width: '+=100',
+                }, 4000, 'linear')
+            })
+            $('button').eq(2).click(function () { //关键字
+                $('.box1').animate({
+                    width: 'hide'
+                }, 4000)
+                $('.box2').animate({
+                    width: 'hide'
+                }, 4000, 'linear')
+            })
+
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <button>操作属性</button>
+    <button>累加属性</button>
+    <button>关键字</button>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>

@@ -5,10 +5,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            width: 300px;
+            margin: 100px auto;
+            border: 1px solid black;
+            list-style: none;
+            border-radius: 10px;
+        }
+
+        .nav>li {
+            line-height: 35px;
+            text-indent: 2em;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+        }
+
+        .nav>li:last-child {
+            border-bottom: none;
+        }
+
+        .nav>li>span {
+            float: right;
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+            margin-top: 2px;
+            background: url(./images/arrow_right.png) no-repeat center center;
+            /* transform: rotate(90deg); */
+        }
+
+        .current {
+            transform: rotate(90deg);
+        }
+
+        .sub>li {
+            line-height: 35px;
+            list-style: none;
+            border-top: 1px solid white;
+            background-color: salmon;
+        }
+
+        .sub>li:hover {
+            background-color: tomato;
+        }
+
+        .sub {
+            display: none;
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            var flag = true;
+            $('.nav>li').click(function () {
+                if (flag) {
+                    flag = false;
+                    $(this).siblings().children('.sub').slideUp(1000); //折叠其他
+                    $(this).children('.sub').slideToggle(1000, function () {
+                        flag = true;
+                    }); //显示当前
+                    $(this).children('span').toggleClass('current');
+                    $(this).siblings().children('span').removeClass('current');
+                }
+
+            })
+        })
+    </script>
+
 </head>
 
 <body>
-
+    <ul class="nav">
+        <li>一级菜单<span></span>
+            <ul class="sub">
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单<span></span>
+            <ul class="sub">
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单<span></span>
+            <ul class="sub">
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单<span></span>
+            <ul class="sub">
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单<span></span>
+            <ul class="sub">
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单<span></span>
+            <ul class="sub">
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单<span></span>
+            <ul class="sub">
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单<span></span>
+            <ul class="sub">
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+    </ul>
 </body>
 
 </html>
