@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: none;
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $('button').eq(0).click(function () {
+                // $('div').css('display', 'block') //让其显示
+                $('div').show(1000, function () {
+                    $('div').css('background', 'blue');
+                });
+            })
+            $('button').eq(1).click(function () {
+                // $('div').css('display', 'none') //让其隐藏
+                $('div').hide(1000, function () {
+                    $('div').css('background', 'red');
+                });
+            })
+            $('button').eq(2).click(function () {
+                $('div').toggle(1000); //对元素进行切换，也可以设置回调函数
+            })
+
+
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+</body>
+
+</html>

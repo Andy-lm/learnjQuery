@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        .left {
+            position: fixed;
+            top: 300px;
+            left: 0;
+            float: left;
+        }
+
+        .right {
+            position: fixed;
+            float: right;
+            top: 300px;
+            right: 0;
+        }
+
+        img {
+            display: none;
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $(window).scroll(demo);
+            function demo() {
+                var $offset = $('html,body').scrollTop();
+                console.log($offset);
+                $offset > 500 ? $('img').show(1000) : $('img').hide(1000);
+            }
+        })
+    </script>
+
+</head>
+
+<body>
+    <img src="./images/left_ad.png" class="left">
+    <img src="./images/right_ad.png" class="right">
+</body>
+
+</html>

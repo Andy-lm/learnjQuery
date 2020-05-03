@@ -5,10 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 440px;
+            height: 298px;
+            border: 1px solid #000;
+            margin: 50px auto;
+        }
+
+        .box .nav li {
+            float: left;
+            width: 110px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color: orange;
+        }
+
+        .box .nav .current {
+            background-color: #cccccc;
+        }
+
+        .box .content li {
+            display: none;
+        }
+
+        .box .content .show {
+            display: block;
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $('.nav>li').mouseenter(function () { //给其添加类
+                $(this).addClass('current'); //设置导航栏可见
+                $('.content>li').removeClass('show'); //删除其他的图片
+                $('.content>li')[$(this).index()].className = 'show'; //显示当前的图片
+            })
+            $('.nav>li').mouseleave(function () { //删除其添加的类
+                $(this).removeClass('current'); //设置导航栏不可见
+                $('.content>li')[$(this).index()].className = ''; //删除当前显示的图片
+            })
+            $('.nav').mouseleave(function () {
+                $('.content>li')[0].className = 'show'; //默认显示第一张图片
+            })
+
+
+        })
+    </script>
+
 </head>
 
 <body>
-
+    <div class="box">
+        <ul class="nav">
+            <li>H5+C3</li>
+            <li>jQuery</li>
+            <li>C语言</li>
+            <li>Go语言</li>
+        </ul>
+        <ul class="content">
+            <li class="show"><img src="./images/11.jpg" alt=""></li>
+            <li><img src="./images/12.jpg" alt=""></li>
+            <li><img src="./images/13.jpg" alt=""></li>
+            <li><img src="./images/14.jpg" alt=""></li>
+        </ul>
+    </div>
 </body>
 
 </html>
