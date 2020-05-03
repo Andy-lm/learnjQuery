@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $('a').click(function (e) {
+                alert('百度');
+                // e.preventDefault(); //阻止默认行为
+            })
+            $('span').trigger('click'); //对于a标签只有触发其里面的标签才可以自动触发其默认事件
+            $('a').triggerHandler('click');
+
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <a href="http://www.baidu.com"><span>百度</span></a><br>
+    <img src="https://www.baidu.com/img/dong_f6764cd1911fae7d460b25e31c7e342c.gif" alt="">
+</body>
+
+</html>

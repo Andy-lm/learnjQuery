@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #cccccc;
+        }
+
+        .class1 {
+            background-color: blueviolet;
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $('button')[0].addEventListener('click', function () {
+                $('div').addClass('class1');
+            })
+            $('button')[1].addEventListener('click', function () {
+                $('div').removeClass('class1');
+            })
+            $('button')[2].addEventListener('click', function () {
+                $('div').toggleClass('class1'); //无就添加有就删除
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <button>添加类</button>
+    <button>删除类</button>
+    <button>替换类</button>
+    <div></div>
+</body>
+
+</html>

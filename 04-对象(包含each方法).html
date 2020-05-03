@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            var arr = [4, 5, 6]
+            var div = document.querySelectorAll('div'); //两者都返回一个由获取元素组成的伪数组
+            console.log(div);
+            var $div = $('div'); //返回的是一个伪数组
+            console.log($div);
+            $.each($div, function (index, value) { //遍历伪数组
+                console.log(index, value);
+            })
+            $.each(arr, function (index, value) { //遍历数组
+                console.log(index, value);
+            })
+
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <div>box1</div>
+    <div>box2</div>
+    <div>box3</div>
+</body>
+
+</html>

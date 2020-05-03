@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+        }
+
+        .box2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $('.box2').click(function (e) {
+                alert(11);
+
+                return false; //阻止事件冒泡
+            })
+            $('.box1').click(function (e) {
+                alert(22);
+            })
+
+
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>

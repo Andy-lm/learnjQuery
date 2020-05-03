@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            // var ul = document.querySelector('ul'); //传统方法进行事件委托
+            // var btn = document.querySelector('button');
+            // ul.addEventListener('click', function (e) {
+            //     console.log(e.target.innerHTML);
+            // })
+            // btn.addEventListener('click', function () {
+            //     var newli = document.createElement('li');
+            //     newli.innerHTML = '我是li'; //利用事件冒泡监听事件点击
+            //     ul.appendChild(newli);
+            // })
+            $('button').click(function () {
+                $('ul').append('<li>我是li</li>');
+            })
+            $('ul').delegate('li', 'click', function () {
+                console.log($(this).html()); //this返回的是点击的对象，而$(this)返回的是一个可以使用
+                console.log(this); //jQuery方法的jQuery对象
+                console.log($(this));
+
+
+
+            })
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <ul>
+        <li>我是第1li</li>
+        <li>我是第2li</li>
+        <li>我是第3li</li>
+        <li>我是第4li</li>
+    </ul>
+    <button>添加li</button>
+</body>
+
+</html>

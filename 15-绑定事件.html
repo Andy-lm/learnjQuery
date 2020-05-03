@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            // var btn = document.querySelector('button'); //传统方式绑定
+            // btn.onclick = function () {
+            //     alert(11);
+            // }
+
+            $('.btn1').click(function () {
+                alert(11);
+            })
+            // $('.btn1').off('click');
+        })
+    </script>
+
+</head>
+
+<body>
+    <button class="btn1">按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+
+</body>
+
+</html>

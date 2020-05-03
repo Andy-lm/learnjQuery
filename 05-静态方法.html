@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var demoClass = {
+            name: 'lm',
+            age: 18,
+            sayhello: function () {
+                alert('hey');
+            }
+        }
+        console.log(demoClass['name']); //调用属性的两种方法
+        console.log(demoClass.age);
+        demoClass.sayhello();
+        demoClass.sex = "男"; //添加属性
+
+        demoClass.play = function () { //添加方法
+            alert(22)
+        }
+        console.log(demoClass);
+        demoClass.play();
+        // for (var k in demoClass) { //遍历对象
+        //     console.log(demoClass[k]);
+
+        // }
+        function Message() {
+            this.skill = function (uname) {
+                console.log('my name is ' + uname);
+            }
+        }
+        var lm = new Message();
+        lm.skill('lm'); //传递参数
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

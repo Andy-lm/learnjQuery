@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 450px;
+            border: 1px solid black;
+            margin: 50px auto;
+        }
+
+        .box>p {
+
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 35px;
+            color: deeppink;
+        }
+
+        .box>ul>li {
+            list-style: none;
+            padding: 5px 0;
+            border-top: 1px dashed #cccccc;
+        }
+
+        .box>ul>li:last-child {
+            border-bottom: 1px dashed #cccccc;
+        }
+
+        .box>ul>li>span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #cccccc;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .box>ul>li:nth-of-type(-n+3) span {
+            background-color: deeppink;
+        }
+
+        .content {
+            display: none;
+            height: 120px;
+            width: 280px;
+            font-size: 12px;
+            line-height: 20px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        .content img {
+            float: left;
+            width: 80px;
+            height: 120px;
+            vertical-align: bottom;
+            margin-right: 10px;
+        }
+
+        .current .content {
+            display: block;
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $('li').mouseenter(function () { //jQuery的方式
+                $(this).addClass('current');
+
+            })
+            $('li').mouseleave(function () {
+                $(this).removeClass('current');
+            })
+            
+            // var lis = document.querySelectorAll('li');
+            // for (var i = 0; i < lis.length; i++) {
+            //     lis[i].addEventListener('mouseenter', function () { //传统的方式
+            //         this.children[1].className = 'content current';
+            //     })
+            //     lis[i].addEventListener('mouseleave', function () {
+            //         this.children[1].className = 'content';
+            //     })
+            // }
+
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class="box">
+        <p>电影排行榜</p>
+        <ul>
+            <li>
+                <span>1</span>电影名称
+                <div class="content">
+                    <img src="./images/zl.jpg" alt="">
+                    简介：故事发生在非洲附近的大海上，主人公冷锋（吴京 饰）遭遇人生滑铁卢，被“开除军籍”，本想漂泊一生的他，正当他打算这么做的时候，一场突如其来的意外打破了他的计划，突然被卷入了一场
+                </div>
+            </li>
+            <li><span>2</span>电影名称
+                <div class="content">
+                    <img src="./images/zl.jpg" alt="">
+                    简介：故事发生在非洲附近的大海上，主人公冷锋（吴京 饰）遭遇人生滑铁卢，被“开除军籍”，本想漂泊一生的他，正当他打算这么做的时候，一场突如其来的意外打破了他的计划，突然被卷入了一场
+                </div>
+            </li>
+            <li><span>3</span>电影名称
+                <div class="content">
+                    <img src="./images/zl.jpg" alt="">
+                    简介：故事发生在非洲附近的大海上，主人公冷锋（吴京 饰）遭遇人生滑铁卢，被“开除军籍”，本想漂泊一生的他，正当他打算这么做的时候，一场突如其来的意外打破了他的计划，突然被卷入了一场
+                </div>
+            </li>
+            <li><span>4</span>电影名称
+                <div class="content">
+                    <img src="./images/zl.jpg" alt="">
+                    简介：故事发生在非洲附近的大海上，主人公冷锋（吴京 饰）遭遇人生滑铁卢，被“开除军籍”，本想漂泊一生的他，正当他打算这么做的时候，一场突如其来的意外打破了他的计划，突然被卷入了一场
+                </div>
+            </li>
+            <li><span>5</span>电影名称
+                <div class="content">
+                    <img src="./images/zl.jpg" alt="">
+                    简介：故事发生在非洲附近的大海上，主人公冷锋（吴京 饰）遭遇人生滑铁卢，被“开除军籍”，本想漂泊一生的他，正当他打算这么做的时候，一场突如其来的意外打破了他的计划，突然被卷入了一场
+                </div>
+            </li>
+            <li><span>6</span>电影名称<div class="content">
+                    <img src="./images/zl.jpg" alt="">
+                    简介：故事发生在非洲附近的大海上，主人公冷锋（吴京 饰）遭遇人生滑铁卢，被“开除军籍”，本想漂泊一生的他，正当他打算这么做的时候，一场突如其来的意外打破了他的计划，突然被卷入了一场
+                </div>
+            </li>
+            <li><span>7</span>电影名称<div class="content">
+                    <img src="./images/zl.jpg" alt="">
+                    简介：故事发生在非洲附近的大海上，主人公冷锋（吴京 饰）遭遇人生滑铁卢，被“开除军籍”，本想漂泊一生的他，正当他打算这么做的时候，一场突如其来的意外打破了他的计划，突然被卷入了一场
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

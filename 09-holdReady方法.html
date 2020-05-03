@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script>
+        $.holdReady(true); //延缓入口函数的执行
+        $(function () {
+            alert('开始执行');
+        })
+    </script>
+</head>
+
+<body>
+    <button>恢复时间执行</button>
+    <div>
+
+    </div>
+    <script>
+        var btn = document.querySelector('button');
+        // alert(11);
+        btn.addEventListener('click', function () {
+            // alert(11);
+            $.holdReady(false);
+        })
+    </script>
+</body>
+
+</html>

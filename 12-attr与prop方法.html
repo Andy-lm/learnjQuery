@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            $('button')[0].addEventListener('click', function () {
+                // var position_img = $('imput').attr('value');
+                // console.log(position_img);
+                // console.log($('input').prop('value'));
+
+
+
+                $('img').prop('src', $('input').val()); //$('input').prop('value')也可以
+                // 图片的src属于属性，而input的value属于属性节点
+                // prop针对属性与属性节点操作，attr针对属性操作
+            })
+
+
+
+
+
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <input type="text" placeholder="输入图片地址">
+    <button>切换图片</button><br>
+    <img src="./images/fox.jpg" alt="">
+    <!-- <img src="https://mat1.gtimg.com/pingjs/ext2020/qqindex2018/dist/img/qq_logo_2x.png" alt=""> -->
+
+</body>
+
+</html>

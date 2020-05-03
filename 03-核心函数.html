@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            var $box1 = $('.box1'); //接受一个选择器，代码片段
+            console.log($box1);
+            var $span = $("<span>哈哈哈</span>"); //接受一个字符串
+            console.log($span);
+            $box1.append($span);
+            var box2 = document.querySelector('#box2');
+            console.log(box2);
+            var $box2 = $(box2); //接受一个原生的DOM函数
+            console.log($box2);
+
+
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div id="box2"></div>
+</body>
+
+</html>
