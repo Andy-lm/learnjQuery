@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            overflow: hidden;
+            width: 600px;
+            height: 161px;
+            margin: 100px auto;
+            border: 1px solid black;
+            background-color: black;
+        }
+
+        .box ul {
+            list-style: none;
+            width: 9000px;
+        }
+
+        .box ul>li {
+            float: left;
+        }
+    </style>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script>
+        $(function () {
+            var offset = 0;
+            var timer;
+            var img1 = $('ul').children('li').eq(0);
+            var img2 = $('ul').children('li').eq(1);
+            $('ul').append(img1.clone(true), img2.clone(true));
+
+            function autoPlay() {
+                timer = setInterval(function () {
+                    // if (offset == -1200) {
+                    //     offset = 0;
+                    // }
+                    offset == -1200 ? offset = 0 : offset;
+                    offset -= 2;
+                    $('ul').css('marginLeft', offset);
+                }, 15)
+            }
+            autoPlay();
+
+            // $('li').mouseenter(function () {
+            //     clearInterval(timer);
+            //     $(this).siblings().fadeTo(500, 0.5);
+            // })
+            // $('li').mouseleave(function () {
+            //     // clearInterval(autoPlay);
+            //     autoPlay();
+            //     $(this).siblings().fadeTo(500, 1);
+            // })
+            $('li').hover(function () {
+                clearInterval(timer);
+                $(this).siblings().fadeTo(100, 0.5);
+                $(this).fadeTo(100, 1)
+
+            }, function () {
+                // clearInterval(autoPlay);
+                autoPlay();
+                $(this).siblings().fadeTo(100, 1);
+            })
+        })
+    </script>
+
 </head>
+
 <body>
-    
+    <div class="box">
+        <ul>
+            <li><img src="images/a.jpg" alt=""></li>
+            <li><img src="images/b.jpg" alt=""></li>
+            <li><img src="images/c.jpg" alt=""></li>
+            <li><img src="images/d.jpg" alt=""></li>
+        </ul>
+    </div>
 </body>
+
 </html>

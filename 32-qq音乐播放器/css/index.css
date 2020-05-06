@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    width: 100%;
+    height: 45px;
+    background-color: red;
+}
+.header .logo {
+    float: left;
+    margin-left: 20px;
+    opacity: 0.5;
+}
+.header .logo:hover {
+    opacity: 1;
+}
+.header .logo a {
+    display: inline-block;
+    width: 78px;
+    height: 21px;
+    background: url('../images/player_logo.png') no-repeat 0 0;
+}
+.header .register {
+    float: right;
+    line-height: 45px;
+}
+/* .header .register:hover {
+    opacity: 1;
+} */
+.header .register li {
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.header .register li:hover {
+    opacity: 1;
+}
+
+.content {
+    width: 100%;
+    height: 460px;
+    background-color: yellow;
+}
+.content .content_in {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: blueviolet;
+}
+.content_in .content_left {
+    float: left;
+    width: 800px;
+    height: 100%;
+    background-color: aqua;
+}
+.content_left .content_toolbar {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+}
+.content_toolbar span {
+    display: inline-block;
+    width: 122px;
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #ffffff;
+    opacity: 0.5;
+}
+.content_toolbar span:hover {
+    opacity: 1;
+}
+.content_toolbar span i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url('../images/icon_sprite.png') no-repeat 0 0;
+    margin-right: 10px;
+    vertical-align: -4px;
+}
+
+.content_toolbar span:nth-child(1) i {
+    background-position: -60px -20px;
+}
+.content_toolbar span:nth-child(2) i {
+    background-position: -20px -20px;
+}
+.content_toolbar span:nth-child(3) i {
+    background-position: -40px -240px;
+}
+.content_toolbar span:nth-child(4) i {
+    background-position: -100px -20px;
+}
+.content_toolbar span:nth-child(5) i {
+    background-position: -40px -300px;
+}
+.content_left .content_list {
+    width: 100%;
+    height: 420px;
+    background-color: darkgray;
+}
+
+.content_list li {
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    background-color: orangered;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+}
+
+.content_list li div {
+    float: left;
+    line-height: 50px;
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+.content_list .list_check {
+    width: 50px;
+    height: 100%;
+    background-color: orchid;
+    text-align: center;
+}
+
+.content_list .list_check i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ffffff;
+}
+
+.content_list .list_number {
+    width: 20px;
+    height: 100%;
+    background-color: rebeccapurple;
+}
+
+.content_list .list_name {
+    width: 50%;
+    height: 100%;
+    background: #cccccc;
+}
+
+.content_list .list_singer {
+    width: 20%;
+    height: 100%;
+    background-color: royalblue;
+}
+
+.content_in .content_right {
+    float: right;
+    width: 400px;
+    height: 100%;
+    background-color: blue;
+}
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: yellowgreen;
+}
+.footer .footer_in {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: chartreuse;
+}
