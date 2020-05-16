@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/lmjquery-1.0.0.js"></script>
+    <!-- <script src="./js/jquery-1.12.4.js"></script> -->
+    <script>
+        $(function () {
+            //打印当前版本号
+            console.log($().jquery);
+            //返回是个Nodelist的数组
+            var divs = document.querySelectorAll('div');
+            var div1 = document.querySelector('div');
+            console.log(divs);
+            console.log(div1);
+            //返回一个数组
+            // console.log($('div').get());
+            //返回第一个元素
+            console.log($('div').get(0));
+            //返回一个jQuery对象
+            console.log($('div').eq(0));
+            console.log($('div').eq(-1));
+            // 返回第一个和最后一个
+            console.log($('div').first());
+            console.log($('div').last());
+
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</body>
+
+</html>

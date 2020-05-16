@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function lmjQuery() {
+
+        }
+        lmjQuery.extend = lmjQuery.prototype.extend = function (obj) {
+            for (var key in obj) {
+                this[key] = obj[key];
+            }
+        }
+        
+        // 可用于添加静态方法
+        lmjQuery.extend({});
+        // 可用于添加动态方法
+        var q = new lmjQuery();
+        q.extend({});
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/lmjquery-1.0.0.js"></script>
+</head>
+
+<body>
+    <span></span>
+    <script>
+        //返回空对象
+        console.log($(''));
+        console.log($(0));
+        console.log($(false));
+        console.log($(NaN));
+        console.log($(null));
+        console.log($());
+        console.log($(undefined));
+
+
+
+
+        console.log($(' <p></p> '));
+        console.log($(' <p><div>1</div></p> '));
+        console.log($('span'));
+        console.log($([1, 1]));
+        var arr = [1, 2, 3];
+        var likeArr = {
+            0: 'lm',
+            1: '18',
+            length: 2
+        }
+        // console.log(({}).toString.apply(arr));
+        console.log($(arr));
+        console.log($(likeArr));
+        console.log($(true));
+        var li = document.createElement('li');
+        console.log($(li));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/lmjquery-1.0.0.js"></script>
+    <script>
+        $(function () {
+            var arr = [1, 2, 3];
+            var obj = { 0: 'lm', 1: '18', length: 2 };
+            var obj1 = {
+                'lm': '18',
+                'age': '22'
+            }
+            // $.each(arr, function (index, value) {
+            //     // if (index === 1) {
+            //     //     return false;
+            //     // }
+            //     console.log(index, value);
+            //     console.log(this);
+
+            // })
+
+            $.map(obj, function (index, value) {
+                console.log(index, value);
+            })
+            var temp = $.map(arr, function (value, index) {
+                if (index == 1) {
+                    return value;
+                }
+            })
+            console.log(temp);
+
+            // $(arr).map(function (index, value) {
+            //     console.log(index, value);
+            // })
+
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var obj = {
+        //     name: 'lm',
+        //     call: function () {
+        //         console.log(this); //指向的是obj
+        //     }
+        // }
+        // obj.call();
+        // function test() {
+        //     console.log(this);
+        // }
+        var obj = {
+        }
+        var arr = [1, 2, 3]
+        var arr1 = [];
+        // window.test.apply(obj2); //将test方法内部的this修改为自定义对象
+        // function sum(a, b) {
+        //     console.log(this);
+        //     console.log(a + b);
+        // }
+        // window.sum.apply(obj2, [3, 4]) //相当于将a,b赋值给sum函数
+        // window.sum.call(obj2, 1, 2)
+
+        arr1.push.apply(obj, arr); //将真数组转换为伪数组，原本内容应push到arr1中
+        console.log(obj);
+
+    </script>
+</body>
+
+</html>

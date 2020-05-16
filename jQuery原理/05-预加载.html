@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/lmjquery-1.0.0.js"></script>
+    <script>
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     alert(11);
+        // })
+        // window.addEventListener('load', function () {
+        //     alert(11)
+        // })
+        // 在ie6,7,8才兼容的方法
+        // document.attachEvent('onreadystatechange', function () {
+        //     if (document.readyState == 'complete') {
+        //         console.log('onreadystatechange');
+        //     } 
+        // })
+        $(function () {
+            var divs = document.querySelectorAll('div');
+            console.log(divs);
+            alert(11)
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
