@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myAjax.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                ajax('04-Ajax-get.php', {
+                    'userName': '李茂',
+                    'userPwd': '123456'
+                }, 3000, function (xhr) {
+                    // console.log(xhr.responseText);
+                    alert(xhr.responseText);
+
+                }, function (xhr) {
+                    // console.log('请求失败');
+                    alert('请求失败');
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button>发送请求</button>
+</body>
+
+</html>

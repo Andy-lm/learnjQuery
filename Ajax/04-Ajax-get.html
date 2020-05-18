@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                // 1，建立一个异步对象
+                var xmlhttp = new XMLHttpRequest();
+                // 2，设置请求方式与请求地址
+                xmlhttp.open('GET', '04-Ajax-get.php', true);
+                // 3，发送请求
+                xmlhttp.send();
+                // 4，监听状态变化
+                xmlhttp.onreadystatechange = function () {
+                    console.log(xmlhttp.readyState);
+                    // 判断请求是否完成，且响应已就绪
+                    if (xmlhttp.readyState === 4) {
+                        if (xmlhttp.status >= 200 && xmlhttp.status < 300 || xmlhttp === 304) {
+                            // 5，请求正确返回结果
+                            console.log(xmlhttp.responseText);
+                            console.log('接收到服务器返回的数据');
+                        } else {
+                            console.log(xmlhttp.status);
+                            console.log('没有接收到服务器返回的数据');
+                        }
+                    }
+                }
+
+
+
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button>发送请求</button>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myAjax2.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                /*  // 做IE5，IE6的兼容
+                 var xhr;
+                 if (window.XMLHttpRequest) {// code for all new browsers
+                     xhr = new XMLHttpRequest();
+                 }
+                 else if (window.ActiveXObject) {// code for IE5 and IE6
+                     xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                 }
+                 // 在ie浏览器中如果通过Ajax发送GET请求，那么浏览器认为同一个URL地址只有一个结果
+                 // console.log(Math.random());
+                 // console.log(new Date().getTime());
+                 xhr.open('POST', '07-Ajax-post.php', true);
+                 // POST请求必须建立一个请求头
+                 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                 // 发送内容写在send中
+                 xhr.send('userName=lm&userPwd=123');
+                 xhr.onreadystatechange = function () {
+                     if (xhr.readyState === 4) {
+                         if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                             // 获取字符串形式的响应数据
+                             console.log(xhr.responseText);
+                         } else {
+                             console.log(xhr.status);
+                         }
+                     } // type, url, data, timeout, success, error
+                 } */
+                ajax({
+                    type: 'post',
+                    url: '07-Ajax-post.php',
+                    data: {
+                        'userName': 'lm',
+                        'userPwd': '134818'
+                    },
+                    timeout: 3000,
+                    success: function (xhr) {
+                        alert(xhr.responseText);
+                    },
+                    error: function (xhr) {
+                        alert('请求失败')
+                    }
+                });
+
+
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <button>发送请求</button>
+</body>
+
+</html>
