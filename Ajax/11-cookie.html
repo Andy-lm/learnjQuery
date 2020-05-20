@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', function () {
+            var date = new Date();
+            date.setDate(date.getDate() - 1);
+            // 设置清除时间，默认为一次会话也就是关闭浏览器
+            document.cookie = "age=18;expires=" + date.toGMTString() + ";";
+        })
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

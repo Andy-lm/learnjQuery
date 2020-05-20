@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myAjax2.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                ajax({ // type, url, data, timeout, success, error
+                    type: 'get',
+                    url: '10-Ajax-json.php',
+                    data: {},
+                    timeout: 3000,
+                    success: function (xhr) {
+                        // console.log(xhr.responseText);
+                        var str = xhr.responseText;
+                        var obj = JSON.parse(str);
+                        // console.log(obj);
+                        console.log(obj.name);
+                        console.log(obj.age);
+                    },
+                    error: function (xhr) {
+                        console.log(xhr.status);
+
+                    }
+
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button>发送请求</button>
+</body>
+
+</html>

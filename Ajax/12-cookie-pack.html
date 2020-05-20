@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', function () {
+            //key, value, day, path, domain
+            // addCookie('age', '18');
+            // addCookie('name', 'lm');
+            // addCookie('gender', 'male', 1, '/')
+            // addCookie('age', '18', -1, '/', '127.0.0.1')
+
+            // 添加cookie
+            domain) {
+                // 处理路径
+                var index = window.location.pathname.lastIndexOf('/');
+                var currentPath = window.location.pathname.slice(0, index);
+                path = path || currentPath;
+                // 处理域名
+                domain = domain || document.domain;
+                // 处理时间
+                if (!day) {
+                    document.cookie = key + "=" + value + ";path=" + path + ";domain=" + domain + ";";
+                } else {
+                    var date = new Date();
+                    date.setDate(date.getDate() + day);
+                    document.cookie = key + "=" + value + ";expires=" + date.toGMTString() + ";path=" + path + ";domain=" + domain + ";";
+                }
+            }
+            // 获取cokiefunction addCookie(key, value, day, path, 
+            console.log(getCookie('name'));
+            function getCookie(key) {
+                var res = document.cookie.split(';');
+                for (var i = 0; i < res.length; i++) {
+                    var temp = res[i].split('=');
+                    if (temp[0].trim() === key) {
+                        return temp[1];
+                    }
+                }
+            }
+            // 删除cookie
+            function delCookie(key, path) {
+                addCookie(key, getCookie(key), -1, path);
+            }
+            // 默认情况下只会删除默认路径中的cookie如果需要删除其他路径中的cookie则需要加路径名称
+            delCookie('gender', '/');
+            delCookie('name');
+            delCookie('age');
+
+        })
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

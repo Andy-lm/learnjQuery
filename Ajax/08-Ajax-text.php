@@ -12,7 +12,9 @@
 // echo $product['des'];
 // echo '|';
 // echo $product['image'];
-header('content-type:text/xml; charset=utf-8');
-echo file_get_contents("./08-Ajax-text.xml");
-
+// // 用xml的形式获取
+// header('content-type:text/xml; charset=utf-8');
+// echo file_get_contents("./08-Ajax-text.xml");
+// 用JSON的形式获取
+echo file_get_contents("./08-Ajax-text.txt");
 ?>

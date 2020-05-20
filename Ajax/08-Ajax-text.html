@@ -50,19 +50,29 @@
                     },
                     timeout: 3000,
                     success: function (xhr) {
+                        // 1,常规方式
                         // console.log(xhr.responseText);
                         // var res = xhr.responseText.split('|');
                         // oTitle.innerHTML = res[0];
                         // oDes.innerHTML = res[1];
                         // oImg.setAttribute('src', res[2]);
+                        // 2,xml接收
                         var name = self.getAttribute('name');
-                        var res = xhr.responseXML;
-                        var title = res.querySelector(name + '>title').innerHTML;
-                        var des = res.querySelector(name + '>des').innerHTML;
-                        var image = res.querySelector(name + '>image').innerHTML;
-                        oTitle.innerHTML = title;
-                        oDes.innerHTML = des;
-                        oImg.setAttribute('src', image);
+                        // 返回过来一个标签
+                        // var res = xhr.responseXML;
+                        // var title = res.querySelector(name + '>title').innerHTML;
+                        // var des = res.querySelector(name + '>des').innerHTML;
+                        // var image = res.querySelector(name + '>image').innerHTML;
+                        // oTitle.innerHTML = title;
+                        // oDes.innerHTML = des;
+                        // oImg.setAttribute('src', image);
+                        // 3,JSON方式
+                        var res = xhr.responseText;
+                        var obj = JSON.parse(res);
+                        var product = obj[name];
+                        oTitle.innerHTML = product['title'];
+                        oDes.innerHTML = product['des'];
+                        oImg.setAttribute('src', product['image']);
                     },
                     error: function (xhr) {
                         console.log('请求失败');
@@ -82,19 +92,29 @@
                     },
                     timeout: 3000,
                     success: function (xhr) {
+                        // 1,常规方式
                         // console.log(xhr.responseText);
                         // var res = xhr.responseText.split('|');
                         // oTitle.innerHTML = res[0];
                         // oDes.innerHTML = res[1];
                         // oImg.setAttribute('src', res[2]);
+                        // 2,xml接收
                         var name = self.getAttribute('name');
-                        var res = xhr.responseXML;
-                        var title = res.querySelector(name + '>title').innerHTML;
-                        var des = res.querySelector(name + '>des').innerHTML;
-                        var image = res.querySelector(name + '>image').innerHTML;
-                        oTitle.innerHTML = title;
-                        oDes.innerHTML = des;
-                        oImg.setAttribute('src', image);
+                        // 返回过来一个标签
+                        // var res = xhr.responseXML;
+                        // var title = res.querySelector(name + '>title').innerHTML;
+                        // var des = res.querySelector(name + '>des').innerHTML;
+                        // var image = res.querySelector(name + '>image').innerHTML;
+                        // oTitle.innerHTML = title;
+                        // oDes.innerHTML = des;
+                        // oImg.setAttribute('src', image);
+                        // 3,JSON方式
+                        var res = xhr.responseText;
+                        var obj = JSON.parse(res);
+                        var product = obj[name];
+                        oTitle.innerHTML = product['title'];
+                        oDes.innerHTML = product['des'];
+                        oImg.setAttribute('src', product['image']);
                     },
                     error: function (xhr) {
                         console.log('请求失败');
@@ -114,19 +134,29 @@
                     },
                     timeout: 3000,
                     success: function (xhr) {
+                        // 1,常规方式
                         // console.log(xhr.responseText);
                         // var res = xhr.responseText.split('|');
                         // oTitle.innerHTML = res[0];
                         // oDes.innerHTML = res[1];
                         // oImg.setAttribute('src', res[2]);
+                        // 2,xml接收
                         var name = self.getAttribute('name');
-                        var res = xhr.responseXML;
-                        var title = res.querySelector(name + '>title').innerHTML;
-                        var des = res.querySelector(name + '>des').innerHTML;
-                        var image = res.querySelector(name + '>image').innerHTML;
-                        oTitle.innerHTML = title;
-                        oDes.innerHTML = des;
-                        oImg.setAttribute('src', image);
+                        // 返回过来一个标签
+                        // var res = xhr.responseXML;
+                        // var title = res.querySelector(name + '>title').innerHTML;
+                        // var des = res.querySelector(name + '>des').innerHTML;
+                        // var image = res.querySelector(name + '>image').innerHTML;
+                        // oTitle.innerHTML = title;
+                        // oDes.innerHTML = des;
+                        // oImg.setAttribute('src', image);
+                        // 3,JSON方式
+                        var res = xhr.responseText;
+                        var obj = JSON.parse(res);
+                        var product = obj[name];
+                        oTitle.innerHTML = product['title'];
+                        oDes.innerHTML = product['des'];
+                        oImg.setAttribute('src', product['image']);
                     },
                     error: function (xhr) {
                         console.log('请求失败');
@@ -136,9 +166,6 @@
                 })
 
             })
-
-
-
 
 
 
